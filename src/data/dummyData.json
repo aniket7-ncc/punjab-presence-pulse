@@ -1,0 +1,226 @@
+{
+  "users": {
+    "principals": [
+      {
+        "id": "PRI001",
+        "name": "Dr. Rajesh Kumar",
+        "employeeId": "EMP001",
+        "schoolId": "SCH001",
+        "email": "principal@school1.edu",
+        "mobile": "9876543210",
+        "username": "principal001",
+        "password": "pass123",
+        "isApproved": true
+      }
+    ],
+    "teachers": [
+      {
+        "id": "TEA001",
+        "name": "Priya Sharma",
+        "employeeId": "EMP002",
+        "schoolId": "SCH001",
+        "email": "teacher1@school1.edu",
+        "mobile": "9876543211",
+        "username": "teacher001",
+        "password": "pass123",
+        "isApproved": true,
+        "subjects": ["Mathematics", "Science"]
+      },
+      {
+        "id": "TEA002",
+        "name": "Amit Singh",
+        "employeeId": "EMP003",
+        "schoolId": "SCH001",
+        "email": "teacher2@school1.edu",
+        "mobile": "9876543212",
+        "username": "teacher002",
+        "password": "pass123",
+        "isApproved": false,
+        "subjects": ["English", "Social Studies"]
+      }
+    ],
+    "government": [
+      {
+        "id": "GOV001",
+        "username": "gov_admin",
+        "password": "gov123",
+        "name": "Punjab Education Department",
+        "designation": "State Administrator"
+      }
+    ]
+  },
+  "students": [
+    {
+      "id": "STU001",
+      "uniqueId": "UP001STU001",
+      "name": "Arjun Patel",
+      "dob": "2010-05-15",
+      "address": "Village Mohali, Punjab",
+      "parentName": "Suresh Patel",
+      "mobile": "9876543213",
+      "aadhaar": "1234-5678-9012",
+      "class": "Class 8",
+      "schoolId": "SCH001",
+      "photo": "/placeholder.svg",
+      "facePhotos": [
+        "/placeholder.svg",
+        "/placeholder.svg",
+        "/placeholder.svg"
+      ],
+      "previousMarksheet": "/placeholder.svg",
+      "transferCertificate": "/placeholder.svg",
+      "isApproved": true,
+      "approvedBy": "PRI001",
+      "registeredBy": "TEA001",
+      "registrationDate": "2024-01-15",
+      "parentOtpVerified": true
+    },
+    {
+      "id": "STU002",
+      "uniqueId": "UP001STU002",
+      "name": "Simran Kaur",
+      "dob": "2011-08-20",
+      "address": "Village Ludhiana, Punjab",
+      "parentName": "Gurpreet Singh",
+      "mobile": "9876543214",
+      "aadhaar": "1234-5678-9013",
+      "class": "Class 7",
+      "schoolId": "SCH001",
+      "photo": "/placeholder.svg",
+      "facePhotos": [
+        "/placeholder.svg",
+        "/placeholder.svg",
+        "/placeholder.svg"
+      ],
+      "isApproved": false,
+      "registeredBy": "TEA001",
+      "registrationDate": "2024-01-20",
+      "parentOtpVerified": true
+    }
+  ],
+  "attendance": [
+    {
+      "id": "ATT001",
+      "studentId": "STU001",
+      "date": "2024-01-22",
+      "time": "09:15:00",
+      "status": "present",
+      "markedBy": "TEA001",
+      "gpsLocation": "30.7333, 76.7794",
+      "capturedPhoto": "/placeholder.svg",
+      "verificationScore": 0.98
+    },
+    {
+      "id": "ATT002",
+      "studentId": "STU001",
+      "date": "2024-01-21",
+      "time": "09:10:00",
+      "status": "present",
+      "markedBy": "TEA001",
+      "gpsLocation": "30.7333, 76.7794",
+      "capturedPhoto": "/placeholder.svg",
+      "verificationScore": 0.95
+    }
+  ],
+  "academicMaterials": [
+    {
+      "id": "MAT001",
+      "studentId": "STU001",
+      "type": "marksheet",
+      "subject": "Mathematics",
+      "title": "Mid-term Exam Results",
+      "file": "/placeholder.svg",
+      "uploadedBy": "TEA001",
+      "uploadDate": "2024-01-15",
+      "marks": 85,
+      "totalMarks": 100
+    },
+    {
+      "id": "MAT002",
+      "studentId": "STU001",
+      "type": "homework",
+      "subject": "Science",
+      "title": "Chapter 5 - Light and Sound",
+      "description": "Complete exercises 1-10 from textbook",
+      "dueDate": "2024-01-25",
+      "uploadedBy": "TEA001",
+      "uploadDate": "2024-01-20"
+    }
+  ],
+  "schools": [
+    {
+      "id": "SCH001",
+      "name": "Government Primary School Mohali",
+      "address": "Village Mohali, Ludhiana District, Punjab",
+      "principalId": "PRI001",
+      "totalStudents": 150,
+      "totalTeachers": 8,
+      "gpsLocation": "30.7333, 76.7794"
+    }
+  ],
+  "approvals": {
+    "students": [
+      {
+        "studentId": "STU002",
+        "requestedBy": "TEA001",
+        "requestDate": "2024-01-20",
+        "status": "pending",
+        "documents": {
+          "marksheet": "/placeholder.svg",
+          "transferCertificate": "/placeholder.svg"
+        }
+      }
+    ],
+    "teachers": [
+      {
+        "teacherId": "TEA002",
+        "requestDate": "2024-01-18",
+        "status": "pending",
+        "documents": {
+          "qualification": "/placeholder.svg",
+          "experience": "/placeholder.svg"
+        }
+      }
+    ]
+  },
+  "entitlements": [
+    {
+      "studentId": "STU001",
+      "type": "midday_meal",
+      "status": "active",
+      "startDate": "2024-01-15"
+    },
+    {
+      "studentId": "STU001",
+      "type": "books",
+      "status": "received",
+      "quantity": 5,
+      "receivedDate": "2024-01-10"
+    },
+    {
+      "studentId": "STU001",
+      "type": "uniform",
+      "status": "pending",
+      "expectedDate": "2024-02-01"
+    },
+    {
+      "studentId": "STU001",
+      "type": "scholarship",
+      "amount": 2000,
+      "status": "approved",
+      "disbursedDate": "2024-01-01"
+    }
+  ],
+  "cameraLogs": [
+    {
+      "id": "CAM001",
+      "studentId": "STU001",
+      "timestamp": "2024-01-22T09:15:00",
+      "capturedFace": "/placeholder.svg",
+      "registeredFace": "/placeholder.svg",
+      "matchScore": 0.98,
+      "location": "30.7333, 76.7794",
+      "markedBy": "TEA001"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ import { AppLayout } from "@/components/layout/AppLayout";
 import NotFound from "./pages/NotFound";
 
 // Lazy load dashboard components to reduce initial bundle size
-const TeacherDashboard = lazy(() => import("@/components/dashboard/TeacherDashboard").then(m => ({ default: m.TeacherDashboard })));
+const TeacherDashboard = lazy(() => import("@/components/dashboard/EnhancedTeacherDashboard").then(m => ({ default: m.EnhancedTeacherDashboard })));
 const StudentDashboard = lazy(() => import("@/components/dashboard/StudentDashboard").then(m => ({ default: m.StudentDashboard })));
 const PrincipalDashboard = lazy(() => import("@/components/dashboard/PrincipalDashboard").then(m => ({ default: m.PrincipalDashboard })));
 const GovernmentDashboard = lazy(() => import("@/components/dashboard/GovernmentDashboard").then(m => ({ default: m.GovernmentDashboard })));
